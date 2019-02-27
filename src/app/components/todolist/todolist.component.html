@@ -1,0 +1,26 @@
+<div class="todolist m-3 ">
+  <div class="container">
+
+    <div class="card">
+      <div class="card-header text-center">
+        Test Header
+      </div>
+      <div class="card-body">
+        <ul *ngFor="let cours of courses" class="list-unstyled">
+          <li class="p-3" style="background-color: rgba(0,0,255,.1)" >
+
+               <p class="d-inline ">{{cours.name | uppercase}} </p>
+
+              <button class="btn btn-danger float-right "  (click)="removeItem(cours)"> Remove </button>
+          </li>
+        </ul>
+      </div>
+  <div class="from">
+    <div class="card-footer form-inline">
+      <input class="form-control mr-5" type="text" [(ngModel)]="addItem"  required>
+      <button class="btn btn-primary float-right  " (click)="addItemB()">Add Item</button>
+  </div>
+  </div>
+    </div>
+  </div>
+</div>
